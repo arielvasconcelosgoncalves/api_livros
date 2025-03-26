@@ -1,12 +1,14 @@
 # Importa o Flask para criar a aplicação web e o request para obter dados das requisições HTTP
 # O jsonify é usado para converter dicionários Python em respostas JSON
 from flask import Flask, request, jsonify
+from flask_cors import cors
 
 # Importa o módulo sqlite3 para manipulação do banco de dados SQLite
 import sqlite3
 
 # Cria uma instância da aplicação Flask
 app = Flask(__name__)
+cors(app)
 
 # Função para inicializar o banco de dados SQLite
 
